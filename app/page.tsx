@@ -6,7 +6,7 @@ import Link from "next/link"
 import { useLanguage } from "@/components/language-provider"
 import { Button } from "@/components/ui/button"
 import { LightboxGallery } from "@/components/lightbox-gallery"
-import { Wheat, Milk, ChefHat, ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -183,11 +183,11 @@ export default function HomePage() {
                   <span className="ml-2 text-gray-600">Vodárenská 97, 373 12 Borovany</span>
                 </div>
                 <div>
-                  <span className="font-semibold text-gray-800">IČO:</span>
+                  <span className="font-semibold text-gray-800">{t("companyId")}</span>
                   <span className="ml-2 text-gray-600">00109207</span>
                 </div>
                 <div>
-                  <span className="font-semibold text-gray-800">DIČ:</span>
+                  <span className="font-semibold text-gray-800">{t("vatId")}</span>
                   <span className="ml-2 text-gray-600">CZ00109207</span>
                 </div>
               </div>
@@ -246,44 +246,59 @@ export default function HomePage() {
           {/* Responsive grid: 1 column on mobile, 2 columns on medium, 3 columns on large+ */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {/* Plant Production */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
-              <div className="flex justify-center mb-6">
-                <div className="p-4 rounded-full bg-gray-100">
-                  <Wheat className="h-10 w-10 text-gray-700" />
-                </div>
+            <div className="flex flex-col h-full bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 relative overflow-hidden flex-shrink-0">
+                <Image 
+                  src="/images/main/rostlinna.jpg" 
+                  alt="Rostlinná výroba"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <h3 className="text-xl font-bold text-center mb-4">{t("plantProduction")}</h3>
-              <div className="text-gray-600 space-y-4">
-                <p>{t("plantProductionText1")}</p>
-                <p>{t("plantProductionText2")}</p>
+              <div className="flex flex-col flex-grow p-6">
+                <h3 className="text-xl font-bold text-center mb-4">{t("plantProduction")}</h3>
+                <div className="text-gray-600 space-y-4 flex-grow">
+                  <p className="text-justify hyphens-auto break-words" style={{textWrap: 'pretty', wordBreak: 'break-word'}}>{t("plantProductionText1")}</p>
+                  <p className="text-justify hyphens-auto break-words" style={{textWrap: 'pretty', wordBreak: 'break-word'}}>{t("plantProductionText2")}</p>
+                </div>
               </div>
             </div>
 
             {/* Animal Production */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
-              <div className="flex justify-center mb-6">
-                <div className="p-4 rounded-full bg-gray-100">
-                  <Milk className="h-10 w-10 text-gray-700" />
-                </div>
+            <div className="flex flex-col h-full bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 relative overflow-hidden flex-shrink-0">
+                <Image 
+                  src="/images/main/zivocisna.jpg" 
+                  alt="Živočišná výroba"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <h3 className="text-xl font-bold text-center mb-4">{t("animalProduction")}</h3>
-              <div className="text-gray-600 space-y-4">
-                <p>{t("animalProductionText1")}</p>
-                <p>{t("animalProductionText2")}</p>
+              <div className="flex flex-col flex-grow p-6">
+                <h3 className="text-xl font-bold text-center mb-4">{t("animalProduction")}</h3>
+                <div className="text-gray-600 space-y-4 flex-grow">
+                  <p className="text-justify hyphens-auto break-words" style={{textWrap: 'pretty', wordBreak: 'break-word'}}>{t("animalProductionText1")}</p>
+                  <p className="text-justify hyphens-auto break-words" style={{textWrap: 'pretty', wordBreak: 'break-word'}}>{t("animalProductionText2")}</p>
+                </div>
               </div>
             </div>
 
-            {/* Company Canteen - This will be in the third column on xl+, or wrap to new row on md */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100 md:col-span-2 xl:col-span-1">
-              <div className="flex justify-center mb-6">
-                <div className="p-4 rounded-full bg-gray-100">
-                  <ChefHat className="h-10 w-10 text-gray-700" />
-                </div>
+            {/* Company Canteen */}
+            <div className="flex flex-col h-full bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300 md:col-span-2 xl:col-span-1">
+              <div className="h-48 relative overflow-hidden flex-shrink-0">
+                <Image 
+                  src="/images/main/food.jpg" 
+                  alt="Podniková jídelna"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <h3 className="text-xl font-bold text-center mb-4">{t("companyCanteen")}</h3>
-              <div className="text-gray-600 space-y-4">
-                <p>{t("companyCanteenText1")}</p>
-                <p>{t("companyCanteenText2")}</p>
+              <div className="flex flex-col flex-grow p-6">
+                <h3 className="text-xl font-bold text-center mb-4">{t("companyCanteen")}</h3>
+                <div className="text-gray-600 space-y-4 flex-grow">
+                  <p className="text-justify hyphens-auto break-words" style={{textWrap: 'pretty', wordBreak: 'break-word'}}>{t("companyCanteenText1")}</p>
+                  <p className="text-justify hyphens-auto break-words" style={{textWrap: 'pretty', wordBreak: 'break-word'}}>{t("companyCanteenText2")}</p>
+                </div>
               </div>
             </div>
           </div>

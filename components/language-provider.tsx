@@ -40,11 +40,11 @@ const translations = {
     animalProduction: "Živočišná výroba",
     companyCanteen: "Závodní kuchyně",
     plantProductionText1:
-      "Naše družstvo obhospodařuje celkem 2600 hektarů zemědělské půdy, z toho tvoří 1575 hektarů orná půda a 1025 hektarů louky a pastviny. Družstvo se specializuje na výrobu obilovin, především pšenice, ječmene a tritikale.",
+      "Naše družstvo obhospodařuje celkem 2580 hektarů zemědělské půdy, z toho tvoří 1570 hektarů orná půda a 1010 hektarů louky a pastviny. Družstvo se specializuje na výrobu obilovin, především pšenice, ječmene a tritikale.",
     plantProductionText2:
-      "Vzhledem k rozsáhlé živočišné výrobě se zaměřujeme na pěstování krmných plodin, hlavně jetelotrav a kukuřice na siláž. Tržní plodinou je řepka olejná, kterou pěstujeme na 240 hektarech půdy.",
+      "Vzhledem k rozsáhlé živočišné výrobě se zaměřujeme na pěstování krmných plodin, hlavně jetelotrav a kukuřice na siláž. Tržní plodinou je řepka olejná, kterou pěstujeme na 250 hektarech půdy.",
     animalProductionText1:
-      "Družstvo se zabývá chovem skotu a drůbeže. Hlavní činností je výroba mléka, v moderních stájích chováme 600 ks dojnic s roční produkcí 4,5 mil. litrů. Na pastvinách máme 200 krav bez tržní produkce mléka.",
+      "Družstvo se zabývá chovem skotu a drůbeže. Hlavní činností je výroba mléka, v moderních stájích chováme 600 ks dojnic s roční produkcí 5 mil. litrů. Na pastvinách máme 200 krav bez tržní produkce mléka.",
     animalProductionText2:
       "Ve čtyřech odchovnách realizujeme výkrm kuřat. V areálu Borovany provozujeme malou porážku drůbeže, díky které můžeme zájemcům nabídnout kuchaná chlazená kuřata přímo od chovatele.",
     companyCanteenText1:
@@ -62,6 +62,9 @@ const translations = {
     writeToUs: "Napište nám",
     nameAndSurname: "Jméno a příjmení",
     phone: "Telefon",
+    companyId: "IČ:",
+    vatId: "DIČ:",
+    id: "ID:",
     whereToFindUs: "Kde nás najdete",
     showLargerMap: "Zobrazit větší mapu",
     sendingMessage: "Odesílání...",
@@ -136,13 +139,13 @@ const translations = {
     animalProduction: "Animal Production",
     companyCanteen: "Company Canteen",
     plantProductionText1:
-      "Our cooperative manages a total of 2600 hectares of agricultural land, of which 1575 hectares are arable land and 1025 hectares are meadows and pastures. The cooperative specializes in the production of cereals, mainly wheat, barley and triticale.",
+      "Our cooperative manages a total of 2580 hectares of agricultural land, of which 1570 hectares are arable land and 1010 hectares are meadows and pastures. The cooperative specializes in the production of cereals, mainly wheat, barley and triticale.",
     plantProductionText2:
-      "Due to extensive livestock production, we focus on growing feed crops, mainly clover-grass and corn for silage. The market crop is rapeseed, which we grow on 240 hectares of land.",
+      "Due to extensive livestock production, we focus on growing feed crops, mainly clover-grass and corn for silage. The market crop is rapeseed, which we grow on 250 hectares of land.",
     animalProductionText1:
-      "The cooperative is engaged in cattle and poultry breeding. The main activity is milk production, in modern stables we keep 600 dairy cows with an annual production of 4.5 million liters. We have 200 cows on pastures without commercial milk production.",
+      "The cooperative is engaged in cattle and poultry breeding. The main activity is milk production, in modern stables we keep 600 dairy cows with an annual production of 5 million liters. We have 200 cows on pastures without commercial milk production.",
     animalProductionText2:
-      "We carry out chicken fattening in four rearing facilities. In the Borovany area, we operate a small poultry slaughterhouse, thanks to which we can offer interested parties cooked chilled chickens directly from the breeder.",
+      "We carry out chicken fattening in four rearing facilities. In the Borovany area, we operate a small poultry slaughterhouse, thanks to which we can offer interested parties dressed chickens directly from the breeder.",
     companyCanteenText1:
       "We operate a company canteen that serves both employees and the general public. We focus on traditional Czech cuisine. The price of lunch is 115 CZK including soup.",
     companyCanteenText2:
@@ -151,13 +154,16 @@ const translations = {
     chairmanBoard: "Chairman of the Board",
     viceChairmanBoard: "Vice Chairman of the Board",
     economist: "Economist",
-    chiefZootechnician: "Chief Zootechnician",
+    chiefZootechnician: "Animal Production Manager",
     chiefMechanizer: "Chief Mechanizer",
-    landManagement: "Land Management",
-    kitchenManager: "Kitchen Manager",
+    landManagement: "Land Manager",
+    kitchenManager: "Head chef",
     writeToUs: "Write to Us",
     nameAndSurname: "Name and Surname",
     phone: "Phone",
+    companyId: "ID:",
+    vatId: "VAT ID:",
+    id: "ID:",
     whereToFindUs: "Where to Find Us",
     showLargerMap: "Show Larger Map",
     sendingMessage: "Sending...",
@@ -231,13 +237,13 @@ const translations = {
     animalProduction: "Tierproduktion",
     companyCanteen: "Betriebskantine",
     plantProductionText1:
-      "Unsere Genossenschaft bewirtschaftet insgesamt 2600 Hektar landwirtschaftliche Fläche, davon sind 1575 Hektar Ackerland und 1025 Hektar Wiesen und Weiden. Die Genossenschaft spezialisiert sich auf die Produktion von Getreide, hauptsächlich Weizen, Gerste und Triticale.",
+      "Unsere Genossenschaft bewirtschaftet insgesamt 2580 Hektar landwirtschaftliche Fläche, davon sind 1570 Hektar Ackerland und 1010 Hektar Wiesen und Weiden. Die Genossenschaft spezialisiert sich auf die Produktion von Getreide, hauptsächlich Weizen, Gerste und Triticale.",
     plantProductionText2:
-      "Aufgrund der umfangreichen Viehzucht konzentrieren wir uns auf den Anbau von Futterpflanzen, hauptsächlich Klee-Gras und Mais für Silage. Die Marktfrucht ist Raps, den wir auf 240 Hektar Land anbauen.",
+      "Aufgrund der umfangreichen Viehzucht konzentrieren wir uns auf den Anbau von Futterpflanzen, hauptsächlich Klee-Gras und Mais für Silage. Die Marktfrucht ist Raps, den wir auf 250 Hektar Land anbauen.",
     animalProductionText1:
-      "Die Genossenschaft beschäftigt sich mit Rinder- und Geflügelzucht. Die Haupttätigkeit ist die Milchproduktion, in modernen Ställen halten wir 600 Milchkühe mit einer Jahresproduktion von 4,5 Millionen Litern. Wir haben 200 Kühe auf Weiden ohne kommerzielle Milchproduktion.",
+      "Die Genossenschaft beschäftigt sich mit Rinder- und Geflügelzucht. Die Haupttätigkeit ist die Milchproduktion, in modernen Ställen halten wir 600 Milchkühe mit einer Jahresproduktion von 5 Millionen Litern. Wir haben 200 Kühe auf Weiden ohne kommerzielle Milchproduktion.",
     animalProductionText2:
-      "Wir führen Hühnermast in vier Aufzuchtbetrieben durch. Im Bereich Borovany betreiben wir eine kleine Geflügelschlachterei, dank der wir Interessenten gekochte gekühlte Hühner direkt vom Züchter anbieten können.",
+      "Wir führen Hühnermast in vier Aufzuchtbetrieben durch. Im Bereich Borovany betreiben wir eine kleine Geflügelschlachterei, dank der wir Interessenten ausgenommenes Huhn direkt vom Züchter anbieten können.",
     companyCanteenText1:
       "Wir betreiben eine Betriebskantine, die sowohl Mitarbeitern als auch der Öffentlichkeit dient. Wir konzentrieren uns auf traditionelle tschechische Küche. Der Preis für das Mittagessen beträgt 115 CZK inklusive Suppe.",
     companyCanteenText2:
@@ -246,13 +252,16 @@ const translations = {
     chairmanBoard: "Vorstandsvorsitzender",
     viceChairmanBoard: "Stellvertretender Vorstandsvorsitzender",
     economist: "Wirtschaftswissenschaftlerin",
-    chiefZootechnician: "Hauptzootechniker",
+    chiefZootechnician: "Leiter der Tierproduktion",
     chiefMechanizer: "Hauptmechaniker",
-    landManagement: "Grundstücksverwaltung",
+    landManagement: "Flächenmanager",
     kitchenManager: "Küchenleiter",
     writeToUs: "Schreiben Sie uns",
     nameAndSurname: "Vor- und Nachname",
     phone: "Telefon",
+    companyId: "ID:",
+    vatId: "USt-ID-Nr.:",
+    id: "ID:",
     whereToFindUs: "Wo Sie uns finden",
     showLargerMap: "Größere Karte anzeigen",
     sendingMessage: "Senden...",
