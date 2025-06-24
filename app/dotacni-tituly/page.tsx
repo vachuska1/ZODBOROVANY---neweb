@@ -41,7 +41,7 @@ export default function DotacniTitulyPage() {
     <div className="min-h-screen bg-gray-50 py-6">
       <div className="w-[90%] mx-auto">
         <div className="text-center mb-4">
-          <h1 className="text-3xl font-bold text-gray-800">Dotační tituly</h1>
+          <h1 className="text-3xl font-bold text-gray-800">{t("grants")}</h1>
         </div>
 
         {error ? (
@@ -54,7 +54,7 @@ export default function DotacniTitulyPage() {
               <div className="bg-gray-800 text-white p-3">
                 <div className="flex justify-between items-center">
                   <h2 className="text-xl font-bold">
-                    Dotační tituly
+                    {t("grants")}
                   </h2>
                   <Button
                     onClick={handlePrint}
@@ -71,7 +71,7 @@ export default function DotacniTitulyPage() {
                 <iframe
                   src={getPdfJsUrl(pdfUrl)}
                   className="w-full h-full border-0"
-                  title="Dotační tituly"
+                  title={t("grants")}
                 />
               </div>
             </div>

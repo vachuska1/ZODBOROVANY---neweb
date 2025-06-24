@@ -114,14 +114,12 @@ export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const galleryImages = [
-    { id: 1, src: "/images/gallery/1.jpg", alt: "ZOD Borovany - Zemědělská technika 1" },
-    { id: 2, src: "/images/gallery/2.jpg", alt: "ZOD Borovany - Zemědělská technika 2" },
-    { id: 3, src: "/images/gallery/3.jpg", alt: "ZOD Borovany - Zemědělská technika 3" },
-    { id: 4, src: "/images/gallery/4.jpg", alt: "ZOD Borovany - Zemědělská technika 4" },
-    { id: 5, src: "/images/gallery/5.jpg", alt: "ZOD Borovany - Zemědělská technika 5" },
-    { id: 6, src: "/images/gallery/6.jpg", alt: "ZOD Borovany - Zemědělská technika 6" },
-    { id: 7, src: "/images/gallery/7.jpg", alt: "ZOD Borovany - Zemědělská technika 7" },
-    { id: 8, src: "/images/gallery/8.jpg", alt: "ZOD Borovany - Zemědělská technika 8" },
+    { id: 1, src: "/images/gallery/Areál Hluboká u Borovan.png", alt: "ZOD Borovany - Areál Hluboká u Borovan" },
+    { id: 2, src: "/images/gallery/Areál Mladošovice.png", alt: "ZOD Borovany - Areál Mladošovice" },
+    { id: 3, src: "/images/gallery/Areál Radostice.png", alt: "ZOD Borovany - Areál Radostice" },
+    { id: 4, src: "/images/gallery/Areál Třebeč.png", alt: "ZOD Borovany - Areál Třebeč" },
+    { id: 5, src: "/images/gallery/Areál Šalmanovice.png", alt: "ZOD Borovany - Areál Šalmanovice" },
+    { id: 6, src: "/images/gallery/png.png", alt: "ZOD Borovany - Další areál" },
   ];
 
   const openLightbox = (index: number) => {
@@ -308,12 +306,12 @@ export default function HomePage() {
       {/* Gallery Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">{t("gallery")}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">{t("farmAreas")}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {galleryImages.map((image, index) => (
               <div
                 key={index}
-                className="aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group"
+                className="aspect-video overflow-hidden rounded-xl shadow-lg cursor-pointer group hover:shadow-xl transition-shadow duration-300"
                 onClick={() => openLightbox(index)}
               >
                 <Image
@@ -321,7 +319,7 @@ export default function HomePage() {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
               </div>
             ))}

@@ -21,13 +21,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/jidelni-listek" className="hover:text-green-400 transition-colors">
-                  {t("menu")}
+                <Link href="/aktuality" className="hover:text-green-400 transition-colors">
+                  {t("news")}
                 </Link>
               </li>
               <li>
-                <Link href="/aktuality" className="hover:text-green-400 transition-colors">
-                  {t("news")}
+                <Link href="/jidelni-listek" className="hover:text-green-400 transition-colors">
+                  {t("menu")}
                 </Link>
               </li>
               <li>
@@ -36,8 +36,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/dokumenty" className="hover:text-green-400 transition-colors">
-                  {t("documents")}
+                <Link href="/stanovy" className="hover:text-green-400 transition-colors">
+                  {t("statutes")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/dotacni-tituly" className="hover:text-green-400 transition-colors">
+                  {t("grants")}
                 </Link>
               </li>
               <li>

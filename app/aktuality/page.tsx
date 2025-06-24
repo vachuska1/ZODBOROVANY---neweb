@@ -36,6 +36,8 @@ export default function NewsPage() {
 
   // Function to create PDF.js URL
   const getPdfJsUrl = (pdfUrl: string) => {
+    // Check if window is defined (client-side)
+    if (typeof window === 'undefined') return ''
     const isAbsoluteUrl = /^https?:\/\//i.test(pdfUrl)
     const fullUrl = isAbsoluteUrl ? pdfUrl : `${window.location.origin}${pdfUrl}`
     return `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(fullUrl)}`
@@ -45,7 +47,7 @@ export default function NewsPage() {
     <div className="min-h-screen bg-gray-50 py-6">
       <div className="w-[90%] mx-auto">
         <div className="text-center mb-4">
-          <h1 className="text-3xl font-bold text-gray-800">Volná pracovní místa</h1>
+          <h1 className="text-3xl font-bold text-gray-800">{t("workOffers")}</h1>
         </div>
 
         {error ? (
@@ -57,7 +59,7 @@ export default function NewsPage() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
               <div className="bg-gray-800 text-white p-3">
                 <div className="flex justify-between items-center">
-                  <h2 className="text-xl font-bold">Volná pracovní místa</h2>
+                  <h2 className="text-xl font-bold">{t("workOffers")}</h2>
                   <Button
                     onClick={handlePrint}
                     variant="outline"
@@ -73,8 +75,8 @@ export default function NewsPage() {
                 <iframe
                   src={getPdfJsUrl(pdfUrl)}
                   className="w-full h-full border-0"
-                  title="Volná pracovní místa"
-                  onError={() => setError("Chyba při načítání dokumentu")}
+                  title={t("workOffers")}
+                  onError={() => setError(t("errorLoadingDocument"))}
                 />
               </div>
             </div>
