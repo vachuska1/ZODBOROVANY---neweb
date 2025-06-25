@@ -114,12 +114,12 @@ export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const galleryImages = [
-    { id: 1, src: "/images/gallery/Areál Hluboká u Borovan.png", alt: "ZOD Borovany - Areál Hluboká u Borovan" },
+    { id: 1, src: "/images/gallery/areál Borovany.png", alt: "ZOD Borovany - Areál Borovany" },
     { id: 2, src: "/images/gallery/Areál Mladošovice.png", alt: "ZOD Borovany - Areál Mladošovice" },
     { id: 3, src: "/images/gallery/Areál Radostice.png", alt: "ZOD Borovany - Areál Radostice" },
     { id: 4, src: "/images/gallery/Areál Třebeč.png", alt: "ZOD Borovany - Areál Třebeč" },
     { id: 5, src: "/images/gallery/Areál Šalmanovice.png", alt: "ZOD Borovany - Areál Šalmanovice" },
-    { id: 6, src: "/images/gallery/png.png", alt: "ZOD Borovany - Další areál" },
+    { id: 6, src: "/images/gallery/Areál Hluboká u Borovan.png", alt: "ZOD Borovany - Areál Hluboká u Borovan" },
   ];
 
   const openLightbox = (index: number) => {
